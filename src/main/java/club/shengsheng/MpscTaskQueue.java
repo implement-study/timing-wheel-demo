@@ -41,7 +41,7 @@ public class MpscTaskQueue {
                 current = next;
                 continue;
             }
-            if(head.compareAndSet(current,next)){
+            if (head.compareAndSet(current, next)) {
                 result.add(current.runnable);
                 current.next = null;
                 current = next;
